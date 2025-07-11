@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- CHEIA API CENTRALIZATĂ ---
     // ATENȚIE: Înlocuiește cu propria ta cheie API de la Google AI Studio.
-    const CHEIE_API_GEMINI = 'AIzaSyDqWW-YihOI7a58O44PwIFAnUWCidTqJt4';
+    const CHEIE_API_GEMINI = 'GEMINI API KEY';
 
     // =============================================
     // --- FUNCȚII GENERALE ȘI UTILITARE ---
