@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrare Widget de Chat - aichat.md</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Header Reutilizabil -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="aichat logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Resurse</a></li>
+                    <li><a href="#">Prețuri</a></li>
+                    <li class="dropdown" id="integrations-dropdown-li">
+                        <a href="integrari.html">Integrări <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <a href="#" class="dropdown-item">
+                                    <strong>Instagram</strong>
+                                    <span>DM-uri care convertesc, cu AI.</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <strong>Telegram</strong>
+                                    <span>Discuții 24/7, totul AI.</span>
+                                </a>
+                                <a href="chat-widget.html" class="dropdown-item">
+                                    <strong>ChatWidget</strong>
+                                    <span>Site-ul tău, asistat de AI.</span>
+                                </a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a href="#" class="dropdown-item">
+                                    <strong>Facebook</strong>
+                                    <span>Mesaje instant, ghidate de AI.</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <strong>AmoCrm</strong>
+                                    <span>Sincronizarea datelor și lead-urilor.</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <strong>999.md</strong>
+                                    <span>Anunțuri și vânzări cu AI.</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Despre noi</a></li>
+                    <li><a href="#">Contacte</a></li>
+                    <li><a href="#">RO</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-secondary">Încearcă</a>
+                <a href="#" class="btn btn-primary">Autentificare</a>
+            </div>
+            <button class="hamburger" id="hamburger-menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Secțiunea Hero -->
+        <section class="integrations-hero-section">
+            <div class="container integrations-hero-container">
+                <div class="integrations-hero-content">
+                    <span class="hero-tag">Lansare Nouă <i class="fa-solid fa-arrow-right"></i></span>
+                    <h1>Bine ai venit la Widget-ul de Chat</h1>
+                    <p>Adaugă un widget de chat pe site-ul tău pentru a îmbunătăți interacțiunea cu clienții.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">Începe acum</a>
+                        <a href="#" class="btn btn-secondary">Află mai multe <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="integrations-hero-image">
+                    <img src="images/Imaginea integrărilor Chat.png" alt="Asistent AI cu un widget de chat">
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea Funcționalități ale Asistentului -->
+        <section class="assistant-functionality-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Funcționalități ale Asistentului</h2>
+                </div>
+                <div class="functionality-grid">
+                    <div class="functionality-card"><i class="fa-solid fa-microphone-lines"></i>
+                        <h3>Răspunsuri la Mesaje</h3>
+                        <p>Asistentul trimite mesaje text și vocale.</p><a href="#">Află mai multe <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="functionality-card"><i class="fa-solid fa-eye"></i>
+                        <h3>Viziune</h3>
+                        <p>Analizează și înțelege imaginile pentru a oferi răspunsuri relevante.</p><a href="#">Află mai
+                            multe <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="functionality-card"><i class="fa-solid fa-star"></i>
+                        <h3>Punctaj pentru Clienți Potențiali</h3>
+                        <p>Evaluează conversațiile și generează punctaje utile pentru clasificare.</p><a href="#">Află
+                            mai multe <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="functionality-card"><i class="fa-solid fa-calendar-days"></i>
+                        <h3>Data și Ora</h3>
+                        <p>Oferă informații precise despre data și ora curente.</p><a href="#">Află mai multe <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="functionality-card"><i class="fa-solid fa-globe"></i>
+                        <h3>Navigare Web</h3>
+                        <p>Caută și oferă informații relevante pe baza cererilor utilizatorilor.</p><a href="#">Află mai
+                            multe <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="functionality-card"><i class="fa-solid fa-image"></i>
+                        <h3>Generare de Imagini</h3>
+                        <p>Creează imagini personalizate pe baza textului.</p><a href="#">Află mai multe <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="functionality-card"><i class="fa-solid fa-rotate"></i>
+                        <h3>Urmărire</h3>
+                        <p>Planifică și gestionează interacțiunile cu clienții.</p><a href="#">Află mai multe <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="functionality-card"><i class="fa-solid fa-envelope"></i>
+                        <h3>Serviciu SMS API</h3>
+                        <p>Notificări automate prin SMS și mesaje de marketing.</p><a href="#">Află mai multe <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea Cazuri de Utilizare -->
+        <section class="use-cases-section">
+            <div class="container">
+                <div class="use-cases-header">
+                    <h2>Cazuri de Utilizare</h2>
+                    <div class="carousel-navigation">
+                        <button class="carousel-nav-btn" id="use-case-prev" aria-label="Caz de utilizare anterior"><i
+                                class="fa-solid fa-arrow-left"></i></button>
+                        <button class="carousel-nav-btn" id="use-case-next" aria-label="Caz de utilizare următor"><i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="use-cases-carousel-wrapper">
+                    <div class="use-cases-carousel" id="use-cases-carousel">
+                        <div class="use-case-card"><img src="images/Container.png" alt="Asistent HR">
+                            <h3>Asistent HR</h3>
+                            <p>Automatizarea sarcinilor HR: interviuri, e-mailuri, colectarea feedback-ului.</p><a
+                                href="#">Află mai multe <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="use-case-card"><img src="images/Container2.png"
+                                alt="Asistent pentru saloane de înfrumusețare">
+                            <h3>Asistent pentru saloane de înfrumusețare</h3>
+                            <p>Automatizarea programărilor, notificărilor și recomandărilor.</p><a href="#">Află mai
+                                multe <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="use-case-card"><img src="images/Container.png" alt="Asistent pentru restaurante">
+                            <h3>Asistent pentru restaurante</h3>
+                            <p>Rezervări, comenzi online, informare despre meniu și promoții.</p><a href="#">Află mai
+                                multe <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="use-case-card"><img src="images/Container2.png" alt="Asistent de vânzări">
+                            <h3>Asistent de vânzări</h3>
+                            <p>Procesarea comenzilor, gestionarea stocurilor și suport post-vânzare.</p><a href="#">Află
+                                mai multe <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea Întrebări Frecvente (FAQ) -->
+        <section class="faq-detailed-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="faq-tag">FAQ</span>
+                    <h2>Întrebări frecvente</h2>
+                    <p>Găsește răspunsuri la întrebări populare despre aichat.md și configurarea unui asistent AI.</p>
+                </div>
+                <div class="faq-detailed-grid">
+                    <div class="faq-detailed-item"><span>1</span>
+                        <div>
+                            <h3>Ce limbi suportă asistentul AI?</h3>
+                            <p>Asistentul AI aichat.md înțelege și se adaptează la orice limbă, detectând automat limba
+                                clientului și susținând comunicarea multilingvă.</p>
+                        </div>
+                    </div>
+                    <div class="faq-detailed-item"><span>2</span>
+                        <div>
+                            <h3>Cum conectez Instagram la aichat.md?</h3>
+                            <p>Accesează secțiunea 'Integrări', selectează Instagram și apasă pe Conectare. După
+                                autorizare, creează un chatbot și selectează asistentul dorit.</p>
+                        </div>
+                    </div>
+                    <div class="faq-detailed-item"><span>3</span>
+                        <div>
+                            <h3>Cum personalizez asistentul AI pentru nevoile mele?</h3>
+                            <p>Poți personaliza asistentul definindu-i rolul, stabilind obiective și încărcând datele
+                                necesare, cum ar fi fișiere sau linkuri ale companiei.</p>
+                        </div>
+                    </div>
+                    <div class="faq-detailed-item"><span>4</span>
+                        <div>
+                            <h3>Cum funcționează sistemul Lead Score?</h3>
+                            <p>Asistentul AI analizează interacțiunile cu clienții și atribuie punctaje pe baza
+                                interesului și implicării acestora, ajutând la identificarea clienților promițători.</p>
+                        </div>
+                    </div>
+                    <div class="faq-detailed-item"><span>5</span>
+                        <div>
+                            <h3>Ce date de instruire folosește asistentul?</h3>
+                            <p>Asistentul este instruit pe baza instrucțiunilor, fișierelor și poate analiza, de
+                                asemenea, site-ul tău web.</p>
+                        </div>
+                    </div>
+                    <div class="faq-detailed-item"><span>6</span>
+                        <div>
+                            <h3>Cum analizează asistentul AI imaginile?</h3>
+                            <p>Funcția Viziune îi permite să recunoască obiecte, să citească textul din imagini și să
+                                ofere răspunsuri relevante pe baza conținutului vizual.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Reutilizabil -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="aichat logo"></a>
+            </div>
+            <div class="footer-col">
+                <h4>Integrări</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">999.md</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Companie</h4>
+                <ul>
+                    <li><a href="#">Despre</a></li>
+                    <li><a href="#">Echipa</a></li>
+                    <li><a href="#">Cariere</a></li>
+                    <li><a href="#">Contacte</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resurse</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Obține o demonstrație</a></li>
+                    <li><a href="#">Cariere</a></li>
+                    <li><a href="#">Prețuri</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Comunitate</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Viber</a></li>
+                    <li><a href="#">+373 610 68 888</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <p>© 2024 aichat.md — O soluție Made in Moldova, folosită global.</p>
+                <div><a href="#">Cookies Policy</a><a href="#">Privacy Policy</a></div>
+            </div>
+        </div>
+
+        <!-- Widget de Chat Global -->
+        <div class="chat-bubble" id="chat-bubble">
+            <i class="fa-solid fa-comment-dots"></i>
+        </div>
+        <div class="chat-widget" id="chat-widget">
+            <div class="widget-header">
+                <h3>Asistent aichat.md</h3>
+                <button id="chat-widget-close" aria-label="Închide chat">×</button>
+            </div>
+            <div class="widget-chat-window" id="widget-chat-window">
+                <div class="chat-message ai">Salut! Sunt asistentul virtual al site-ului. Te pot ajuta cu informații
+                    despre serviciile noastre sau să te ghidez pe pagină?</div>
+            </div>
+            <form class="widget-chat-form" id="widget-chat-form">
+                <input type="text" id="widget-user-input" placeholder="Scrie aici..." autocomplete="off">
+                <button type="submit" aria-label="Trimite mesaj"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
